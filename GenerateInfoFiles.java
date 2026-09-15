@@ -19,25 +19,6 @@ public class GenerateInfoFiles {
     private static final String[] PRODUCT_NAMES = { "Laptop", "Mouse", "Teclado", "Monitor", "Audifonos", "Impresora",
             "Silla Gaming", "Pad Mouse" };
 
-    private static final Random RANDOM = new Random();for(
-    int i = 0;i<100;i++)
-    {
-        String firstName = FIRST_NAMES[RANDOM.nextInt(FIRST_NAMES.length)];
-        String lastName = LAST_NAMES[RANDOM.nextInt(LAST_NAMES.length)];
-        String documentType = DOCUMENT_TYPES[RANDOM.nextInt(DOCUMENT_TYPES.length)];
-        String documentNumber = String.valueOf(RANDOM.nextInt(90000000) + 10000000);
-        String productName = PRODUCT_NAMES[RANDOM.nextInt(PRODUCT_NAMES.length)];
-        int quantity = RANDOM.nextInt(10) + 1;
-        double price = RANDOM.nextDouble() * 1000;
+    private static final Random RANDOM = new Random();
 
-        String line = firstName + "," + lastName + "," + documentType + "," + documentNumber + "," + productName
-                + "," + quantity + "," + price;
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("test_data.txt", true))) {
-            writer.write(line);
-            writer.newLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
