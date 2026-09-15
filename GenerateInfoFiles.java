@@ -22,4 +22,3 @@ public class GenerateInfoFiles {
     private static final Random RANDOM = new Random();
 
 }
-/** te atrapare calixtooooo **/
